@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% block sidenav %}
+{% endblock sidenav %}
+
+{% block content %}
+    <h1> Welcome to Book Exchange System</h1>
+    <p>
+        To register <a href="{% url 'register' %}"> Click Here </a>
+    </p>
+    <p>
+        To login <a href="{% url 'login' %}?next=/home"> Click Here </a>
+    </p>
+{% endblock content %}
