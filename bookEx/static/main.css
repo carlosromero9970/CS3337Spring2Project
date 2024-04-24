@@ -17,7 +17,7 @@
 #leftsidebar {
      width: 180px;
      height: 350px;
-     float: left;
+     float: right;
 }
 
 #nav li {
@@ -46,7 +46,7 @@
     margin-top: 5px;
     padding-top: 5px;
     padding-bottom: 10px;
-    background-color: #FFFFFF;
+    background-color: #FFECA1;
     border-top: thin solid #BBBBBB;
     clear: both;
     color: #969696
