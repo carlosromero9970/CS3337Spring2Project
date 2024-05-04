@@ -116,6 +116,7 @@ def book_delete(request, book_id):
                   )
 
 
+# What we started to added as a team
 def about_us(request):
     return render(request,
                   'bookMng/aboutus.html',
@@ -123,6 +124,7 @@ def about_us(request):
                       'item_list': MainMenu.objects.all(),
                   }
                   )
+
 
 def search_a_book(request):
     return render(request,
@@ -132,3 +134,26 @@ def search_a_book(request):
                   }
                   )
 
+
+# Added For Favorite Feature
+def book_favorite(request, fav_id):
+    book = Book.objects.get(id=fav_id)
+    if Book.objects.filter(id=fav_id, favorite=request.user).exists():
+            book.favorite.remove(request.user)
+    else:
+            book.favorite.add(request.user)
+    return HttpResponseRedirect("/displaybooks")
+
+
+# Added For Favorite Books Page
+def favoritebooks(request):
+    books = Book.objects.filter(favorite=request.user)
+    for b in books:
+        b.pic_path = b.picture.url[14:]
+    return render(request,
+                  'bookMng/favoritebooks.html',
+                  {
+                      'item_list': MainMenu.objects.all(),
+                      'books': books
+                  }
+                  )

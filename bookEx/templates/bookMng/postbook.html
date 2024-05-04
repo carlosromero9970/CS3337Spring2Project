@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
+
+    {% block title %}
+       Post Book
+    {% endblock title %}
+
 {% block sidenav %}
    {% for item in item_list %}
      <li>
@@ -14,7 +19,7 @@
 <p> Post Book Successfully!</p>
 {% else %}
 <form action="" enctype="multipart/form-data" method="post" novalidate>
-    <table>
+    <table class="centeredtable">
         {{ form.as_table }}
         <tr>
           <td colspan="2">

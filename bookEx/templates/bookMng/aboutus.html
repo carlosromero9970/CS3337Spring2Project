@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
 
+
+    {% block title %}
+       About Us
+    {% endblock title %}
+
+
 {% block sidenav %}
    {% for item in item_list %}
      <li>
@@ -11,5 +17,70 @@
 
 {% block content %}
     <h1> About Us Page </h1>
-    <h3> This is our project based off of our class project </h3>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width:400px">
+                    <img src="{% static 'logo.jpg' %}" class="card-img-top" alt="..." style="width:100%">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer"></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="{% static 'delete.png' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer"></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width:400px">
+                    <img src="{% static 'jakethedog.png' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Carlos Romero</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer"></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer"></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock content %}

@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+    {% block title %}
+       Display Books
+    {% endblock title %}
+
 {% block sidenav %}
    {% for item in item_list %}
      <li>
@@ -11,7 +15,7 @@
 
 {% block content %}
    <h1> Display Book Page</h1>
-   <table border="2" width="400">
+    <table class="centeredtable" border="2" width="400">
        <tr>
             <th>
                 Book Name
@@ -30,7 +34,18 @@
             <td>
                 <img src="{% static book.pic_path %}" height="50"/>
             </td>
+
+            <!--FOR THE FAVORITE FEATURE-->
+            <td align="center">
+                <a href="book_favorite/{{ book.id }}">
+                    {% if request.user in book.favorite.all %}
+                    <img src="{% static 'favorite.webp' %}" height="50" />
+                    {% else %}
+                    <img src="{% static 'unfavorite.webp' %}" height="50"/>
+                    {% endif %}
+                </a>
+            </td>
         </tr>
        {% endfor %}
-   </table>
+    </table>
 {% endblock content %}
