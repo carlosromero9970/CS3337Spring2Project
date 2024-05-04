@@ -124,3 +124,11 @@ def about_us(request):
                   }
                   )
 
+def search_a_book(request):
+    return render(request,
+                  'bookMng/searchabook.html',
+                  {
+                      'item_list': MainMenu.objects.all(),
+                  }
+                  )
+

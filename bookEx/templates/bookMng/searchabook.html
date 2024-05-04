@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block sidenav %}
+   {% for item in item_list %}
+     <li>
+       <a href="{{ item.link }}"> {{ item.item }} </a>
+     </li>
+   {% endfor %}
+{% endblock sidenav %}
+
+{% block content %}
+    <h1> Search a Book </h1>
+    <h3> This is where we will search for a book </h3>
+{% endblock content %}

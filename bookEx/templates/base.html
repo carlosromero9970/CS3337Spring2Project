@@ -4,16 +4,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <title>
         {% block title %}
            Project Tab
         {% endblock title %}
     </title>
-    <link href="{% static 'main.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'styles.css' %}" rel="stylesheet" type="text/css">
 </head>
+
 <body>
 <div id="wrapper">
-    <header id="header">
+    <header id="header ">
         <img src="{% static 'logo.jpg' %}" height="50"/>
         <span style="float: right;">
             {% if user.is_authenticated %}
@@ -40,16 +42,17 @@
                     <li>Menu 1</li>
                     <li>Menu 2</li>
                     <li>Menu 3</li>
+                    <li>Menu 4</li>
                 {% endblock sidenav %}
             </ul>
         </nav>
     </aside>
-
-    <section id="main">
+     <!--id="main"-->
+    <main id="main">
         {% block content %}
            <h1> This is our Book Exchange System</h1>
         {% endblock content %}
-    </section>
+    </main>
 
     <footer id="footer">
         2024 Spring CS3337 Django Python Project
