@@ -32,10 +32,15 @@ Git & GitHub
 📂 Project Structure
 CS3337Spring2Project/
 │
+
 ├── manage.py
+
 ├── db.sqlite3
+
 ├── bookEx/        # Main project configuration
+
 ├── bookMng/       # Application for book management
+
 └── templates/     # HTML templates
 ⚙️ Installation & Setup
 
