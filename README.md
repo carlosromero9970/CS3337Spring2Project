@@ -1,4 +1,4 @@
-📚 CS3337 Book Exchange Web Application
+📚 Book Exchange Web Application
 
 📌 Overview
 
